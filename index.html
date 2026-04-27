@@ -11,7 +11,7 @@
 
 <!-- HEADER -->
 <header class="bg-gray-800 px-6 py-4">
-  <div class="flex items-center justify-between">
+  <div class="flex items-center">
 
     <!-- LOGO -->
     <a href="index.html" class="flex items-center gap-3">
@@ -20,18 +20,18 @@
     </a>
 
     <!-- MOBILE BUTTON -->
-    <button id="menu-btn" class="md:hidden text-3xl">☰</button>
+    <button id="menu-btn" class="md:hidden ml-auto text-3xl">☰</button>
 
     <!-- MENU -->
     <nav id="menu"
       class="hidden flex-col absolute top-20 left-0 w-full bg-gray-800 p-6 gap-4 z-50
-             md:static md:flex md:flex-row md:bg-transparent md:p-0">
+             md:static md:flex md:flex-row md:flex-1 md:justify-center md:items-center md:gap-10">
 
-      <a href="index.html" class="block">Home</a>
-      <a href="project.html" class="block">Project</a>
-      <a href="about.html" class="block">About</a>
-      <a href="blog.html" class="block">Blog</a>
-      <a href="contact.html" class="block">Contact</a>
+      <a href="index.html" class="hover:text-yellow-300">Home</a>
+      <a href="project.html" class="hover:text-yellow-300">Project</a>
+      <a href="about.html" class="hover:text-yellow-300">About</a>
+      <a href="blog.html" class="hover:text-yellow-300">Blog</a>
+      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
 
     </nav>
 
@@ -115,9 +115,9 @@
 </footer>
 
 </body>
-   <script>
+ <script>
   const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("menu"); 
+  const menu = document.getElementById("menu");
 
   if (btn && menu) {
     btn.addEventListener("click", () => {
