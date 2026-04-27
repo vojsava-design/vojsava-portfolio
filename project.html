@@ -11,26 +11,29 @@
 
 <!-- HEADER -->
 <header class="bg-gray-800 px-6 py-4 sticky top-0 z-50">
-  <div class="flex items-center justify-between">
 
-    <!-- LOGO -->
-    <a href="index.html" class="flex items-center gap-3">
+  <div class="relative flex items-center">
+
+    <!-- LOGO LEFT -->
+    <a href="index.html" class="flex items-center gap-3 z-10">
       <img src="image/logo.webp" class="w-12 h-12 rounded-full">
       <span class="text-yellow-400 font-bold text-xl">HomeSmart</span>
     </a>
 
-    <!-- MENU -->
-    <nav class="hidden md:flex gap-10 font-semibold">
+    <!-- CENTER MENU -->
+    <nav class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-10 font-semibold">
+
       <a href="index.html" class="hover:text-yellow-300">Home</a>
       <a href="project.html" class="hover:text-yellow-300">Project</a>
       <a href="about.html" class="hover:text-yellow-300">About</a>
       <a href="blog.html" class="hover:text-yellow-300">Blog</a>
       <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+
     </nav>
 
   </div>
-</header>
 
+</header>
 <!-- TITLE -->
 <section class="text-center py-10">
   <h1 class="text-3xl font-bold text-yellow-300">Our Projects</h1>
@@ -38,24 +41,28 @@
 </section>
 
 <!-- GRID -->
-<main class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-6xl mx-auto">
+<section class="text-center py-10">
+  <h1 class="text-3xl font-bold text-yellow-300">Our Projects</h1>
+  <p class="text-gray-300">Find your dream home</p>
+</section>
 
-  <div class="bg-gray-800 p-5 rounded-lg">
-    <h3 class="text-yellow-300 font-bold">Modern House</h3>
+<main class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-6xl mx-auto pb-20">
+
+  <div class="bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
+    <h3 class="text-yellow-300 font-bold text-xl mb-2">Modern House</h3>
     <p class="text-gray-300">Luxury modern design home.</p>
   </div>
 
-  <div class="bg-gray-800 p-5 rounded-lg">
-    <h3 class="text-yellow-300 font-bold">Villa</h3>
+  <div class="bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
+    <h3 class="text-yellow-300 font-bold text-xl mb-2">Villa</h3>
     <p class="text-gray-300">Beautiful villa project.</p>
   </div>
 
-  <div class="bg-gray-800 p-5 rounded-lg">
-    <h3 class="text-yellow-300 font-bold">Apartment</h3>
+  <div class="bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
+    <h3 class="text-yellow-300 font-bold text-xl mb-2">Apartment</h3>
     <p class="text-gray-300">City apartment design.</p>
   </div>
 
 </main>
-
 </body>
 </html>
