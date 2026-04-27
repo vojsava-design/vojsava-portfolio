@@ -16,12 +16,32 @@
 </a>
 
 <!-- NAVBAR -->
-<header class="flex justify-center gap-6 py-4 bg-cyan-900">
-  <a class="hover:text-yellow-400" href="index.html">Home</a>
-  <a class="hover:text-yellow-400" href="Project.html">Project</a>
-  <a class="hover:text-yellow-400" href="About.html">About</a>
-  <a class="hover:text-yellow-400" href="Blog.html">Blog</a>
-  <a class="hover:text-yellow-400" href="Contact.html">Contact</a>
+<header class="bg-gray-800 px-6 py-4">
+  <div class="flex items-center justify-between">
+
+    <!-- LOGO -->
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="image/logo.webp" class="w-12 h-12 rounded-full" alt="logo">
+      <span class="text-yellow-400 font-bold text-xl">HomeSmart</span>
+    </a>
+
+    <!-- MOBILE BUTTON -->
+    <button id="menu-btn" class="md:hidden text-3xl">☰</button>
+
+    <!-- MENU -->
+    <nav id="menu"
+      class="hidden flex-col absolute top-20 left-0 w-full bg-gray-800 p-6 gap-4 z-50
+             md:static md:flex md:flex-row md:bg-transparent md:p-0">
+
+      <a href="index.html" class="block">Home</a>
+      <a href="project.html" class="block">Project</a>
+      <a href="about.html" class="block">About</a>
+      <a href="blog.html" class="block">Blog</a>
+      <a href="contact.html" class="block">Contact</a>
+
+    </nav>
+
+  </div>
 </header>
 
 <!-- CONTACT SECTION -->
@@ -140,4 +160,15 @@
 </footer>
 
 </body>
+
+  <script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  if (btn && menu) {
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  }
+</script>
 </html>
