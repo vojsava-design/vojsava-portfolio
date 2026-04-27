@@ -10,23 +10,32 @@
 <body class="bg-gray-900 text-white">
 
 <!-- HEADER -->
-<header class="flex items-center justify-between px-6 py-4 bg-gray-800">
+<header class="bg-gray-800 px-6 py-4">
+  <div class="flex items-center justify-between">
 
-  <!-- LOGO (clickable home) -->
-  <a href="index.html" class="flex items-center gap-3 hover:opacity-80">
-    <img src="image/logo.webp" class="w-12 h-12 rounded-full" alt="logo">
-    <span class="text-yellow-400 font-bold text-xl">HomeSmart</span>
-  </a>
+    <!-- LOGO -->
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="image/logo.webp" class="w-12 h-12 rounded-full" alt="logo">
+      <span class="text-yellow-400 font-bold text-xl">HomeSmart</span>
+    </a>
 
-  <!-- NAVBAR -->
-  <nav class="hidden md:flex gap-6 font-semibold">
-    <a href="index.html" class="hover:text-yellow-300">Home</a>
-    <a href="Project.html" class="hover:text-yellow-300">Project</a>
-    <a href="About.html" class="hover:text-yellow-300">About</a>
-    <a href="Blog.html" class="hover:text-yellow-300">Blog</a>
-    <a href="Contact.html" class="hover:text-yellow-300">Contact</a>
-  </nav>
+    <!-- MOBILE BUTTON -->
+    <button id="menu-btn" class="md:hidden text-3xl">☰</button>
 
+    <!-- MENU -->
+    <nav id="menu"
+      class="hidden flex-col absolute top-20 left-0 w-full bg-gray-800 p-6 gap-4 z-50
+             md:static md:flex md:flex-row md:bg-transparent md:p-0">
+
+      <a href="index.html" class="block">Home</a>
+      <a href="project.html" class="block">Project</a>
+      <a href="about.html" class="block">About</a>
+      <a href="blog.html" class="block">Blog</a>
+      <a href="contact.html" class="block">Contact</a>
+
+    </nav>
+
+  </div>
 </header>
 
 <!-- HERO -->
@@ -106,4 +115,14 @@
 </footer>
 
 </body>
+  <script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  if (btn && menu) {
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  }
+</script>
 </html>
