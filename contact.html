@@ -22,22 +22,26 @@
     Send me a message or connect via social media.
   </p>
 
-  <form class="space-y-4 bg-gray-800 p-6 rounded-xl">
+ <form action="https://formspree.io/f/mvzdjkvd" method="POST" class="space-y-4">
 
-    <input type="text" placeholder="Your Name"
-      class="w-full p-3 rounded text-black">
+  <input type="text" name="name" placeholder="Your Name"
+    class="w-full p-3 rounded bg-gray-800 text-white">
 
-    <input type="email" placeholder="Your Email"
-      class="w-full p-3 rounded text-black">
+  <input type="email" name="email" placeholder="Your Email"
+    class="w-full p-3 rounded bg-gray-800 text-white">
 
-    <textarea rows="5" placeholder="Your Message"
-      class="w-full p-3 rounded text-black"></textarea>
+  <textarea name="message" placeholder="Your Message"
+    class="w-full p-3 rounded bg-gray-800 text-white h-32"></textarea>
 
-    <button class="bg-yellow-400 text-black px-6 py-2 rounded hover:bg-yellow-300">
-      Send Message
-    </button>
+  <!-- spam protection -->
+  <input type="text" name="_gotcha" style="display:none">
 
-  </form>
+  <button type="submit"
+    class="bg-yellow-400 text-gray-900 px-6 py-3 rounded font-bold hover:bg-yellow-300">
+    Send Message
+  </button>
+
+</form>
 
   <div class="mt-10 text-center space-y-2">
     <p class="text-yellow-400 font-bold">Find me here:</p>
