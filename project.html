@@ -10,42 +10,7 @@
 <body class="bg-gray-900 text-white">
 
 <!-- HEADER -->
-<header class="bg-gray-800 px-6 py-4 sticky top-0 z-50">
-
-  <div class="flex items-center justify-between relative">
-
-    <!-- LOGO -->
-    <a href="index.html" class="flex items-center gap-3 z-10">
-      <img src="image/logo.webp" class="w-12 h-12 rounded-full" alt="logo">
-      <span class="text-yellow-400 font-bold text-xl">HomeSmart</span>
-    </a>
-
-    <!-- CENTER MENU -->
-    <nav class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-10 font-semibold">
-
-      <a href="index.html" class="hover:text-yellow-300">Home</a>
-      <a href="project.html" class="hover:text-yellow-300">Project</a>
-      <a href="about.html" class="hover:text-yellow-300">About</a>
-      <a href="blog.html" class="hover:text-yellow-300">Blog</a>
-      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
-
-    </nav>
-
-    <!-- MOBILE BUTTON -->
-    <button id="menu-btn" class="md:hidden text-3xl">☰</button>
-
-  </div>
-
-  <!-- MOBILE MENU -->
-  <nav id="menu" class="hidden flex-col md:hidden bg-gray-800 mt-4 p-6 gap-4">
-    <a href="index.html">Home</a>
-    <a href="project.html">Project</a>
-    <a href="about.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-</header>
+<div id="header"></div>
 
 <!-- TITLE -->
 <section class="text-center py-10">
@@ -54,6 +19,7 @@
 </section>
 
 <!-- PROJECT GRID -->
+
 <main class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-6xl mx-auto pb-20">
 
   <div class="bg-gray-800 rounded-xl overflow-hidden shadow hover:scale-105 transition">
@@ -65,7 +31,7 @@
   </div>
 
   <div class="bg-gray-800 rounded-xl overflow-hidden shadow hover:scale-105 transition">
-    <img src="image/hom12.jpeg" class="h-48 w-full object-cover">
+    <img src="image/swiss5.jpg" class="h-48 w-full object-cover">
     <div class="p-4">
       <h3 class="text-yellow-300 font-bold text-xl mb-2">Villa</h3>
       <p class="text-gray-300">Beautiful villa project.</p>
@@ -73,7 +39,7 @@
   </div>
 
   <div class="bg-gray-800 rounded-xl overflow-hidden shadow hover:scale-105 transition">
-    <img src="image/hom12.jpeg" class="h-48 w-full object-cover">
+    <img src="image/home6.webp" class="h-48 w-full object-cover">
     <div class="p-4">
       <h3 class="text-yellow-300 font-bold text-xl mb-2">Apartment</h3>
       <p class="text-gray-300">City apartment design.</p>
@@ -81,7 +47,6 @@
   </div>
 
 </main>
-
 <footer class="bg-gray-800 text-white mt-10">
 
   <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 p-6">
@@ -138,15 +103,32 @@
 </footer>
 
 <!-- SCRIPT -->
-<script>
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("menu");
+<!-- PAGE CONTENT ABOVE -->
 
-  if (btn && menu) {
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-  }
+<div id="header"></div>
+
+<!-- YOUR PAGE CONTENT -->
+<section>...</section>
+
+<!-- FOOTER -->
+<footer>...</footer>
+
+<!-- ✅ SCRIPT GOES HERE (BOTTOM OF PAGE) -->
+<script>
+fetch("header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    }
+  });
 </script>
 
 </body>
