@@ -1,47 +1,50 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>HomeSmart | Contact</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeSmart | Contact</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-900 text-white">
 
-<!-- LOGO -->
-<a href="index.html" class="flex items-center gap-3 p-4">
-  <img src="image/logo.webp" class="w-14 h-14 rounded-full">
-  <h1 class="text-xl font-bold text-yellow-400 underline">HomeSmart</h1>
-</a>
+<!-- HEADER (ONLY ONE) -->
+<header class="bg-gray-800 px-6 py-4 sticky top-0 z-50">
 
-<!-- NAVBAR -->
-<header class="bg-gray-800 px-6 py-4">
-  <div class="flex items-center justify-between">
+  <div class="flex items-center justify-between relative">
 
     <!-- LOGO -->
-    <a href="index.html" class="flex items-center gap-3">
+    <a href="index.html" class="flex items-center gap-3 z-10">
       <img src="image/logo.webp" class="w-12 h-12 rounded-full" alt="logo">
       <span class="text-yellow-400 font-bold text-xl">HomeSmart</span>
     </a>
 
-    <!-- MOBILE BUTTON -->
-    <button id="menu-btn" class="md:hidden text-3xl">☰</button>
+    <!-- CENTER MENU -->
+    <nav class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-10 font-semibold">
 
-    <!-- MENU -->
-    <nav id="menu"
-      class="hidden flex-col absolute top-20 left-0 w-full bg-gray-800 p-6 gap-4 z-50
-             md:static md:flex md:flex-row md:bg-transparent md:p-0">
-
-      <a href="index.html" class="block">Home</a>
-      <a href="project.html" class="block">Project</a>
-      <a href="about.html" class="block">About</a>
-      <a href="blog.html" class="block">Blog</a>
-      <a href="contact.html" class="block">Contact</a>
+      <a href="index.html" class="hover:text-yellow-300">Home</a>
+      <a href="project.html" class="hover:text-yellow-300">Project</a>
+      <a href="about.html" class="hover:text-yellow-300">About</a>
+      <a href="blog.html" class="hover:text-yellow-300">Blog</a>
+      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
 
     </nav>
 
+    <!-- MOBILE BUTTON -->
+    <button id="menu-btn" class="md:hidden text-3xl">☰</button>
+
   </div>
+
+  <!-- MOBILE MENU -->
+  <nav id="menu" class="hidden flex-col md:hidden bg-gray-800 mt-4 p-6 gap-4">
+    <a href="index.html">Home</a>
+    <a href="project.html">Project</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
 </header>
 
 <!-- CONTACT SECTION -->
@@ -55,8 +58,7 @@
     Send me a message or connect via social media.
   </p>
 
-  <!-- FORM -->
-  <form class="space-y-4 bg-cyan-900 p-6 rounded-xl">
+  <form class="space-y-4 bg-gray-800 p-6 rounded-xl">
 
     <input type="text" placeholder="Your Name"
       class="w-full p-3 rounded text-black">
@@ -73,7 +75,6 @@
 
   </form>
 
-  <!-- SOCIAL LINKS -->
   <div class="mt-10 text-center space-y-2">
     <p class="text-yellow-400 font-bold">Find me here:</p>
 
@@ -94,77 +95,19 @@
 
 </main>
 
-<!-- FOOTER (SAME FOR ALL PAGES ✔) -->
-<footer class="bg-blue-950 text-white mt-10">
+<!-- FOOTER -->
+<footer class="bg-gray-800 text-white mt-10">
 
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 p-6">
-
-    <!-- LOGO + PORTFOLIO -->
-    <div>
-
-      <!-- Clickable Logo -->
-      <a href="index.html" class="flex items-center gap-3 mb-4">
-        <img src="image/logo.webp" alt="HomeSmart" class="w-10 h-10 rounded-full">
-        <span class="text-yellow-400 font-bold text-lg">HomeSmart</span>
-      </a>
-
-      <h3 class="text-cyan-400 font-bold mb-3">Portfolio</h3>
-
-      <a href="About.html" class="block hover:underline">About</a>
-      <a href="Project.html" class="block hover:underline">Projects</a>
-      <a href="Blog.html" class="block hover:underline">Blog</a>
-      <a href="privacy.html" class="block hover:underline">Privacy Policy</a>
-
-    </div>
-
-    <!-- CONTACT -->
-    <div>
-      <h3 class="text-yellow-300 font-bold mb-3">Contact</h3>
-
-      <a href="mailto:sawa.sawa7920@gmail.com" class="block hover:underline">
-        Email Me
-      </a>
-
-      <a href="https://www.instagram.com/vojsava_codes" target="_blank"
-         class="block hover:underline">
-        Instagram
-      </a>
-
-      <a href="https://linkedin.com/in/vojsava-gjiriti-8a9284290" target="_blank"
-         class="block hover:underline">
-        LinkedIn
-      </a>
-    </div>
-
-    <!-- ABOUT TEXT -->
-    <div>
-      <h3 class="text-yellow-300 font-bold mb-3">About</h3>
-      <p class="text-gray-300 text-sm">
-        Personal portfolio showcasing web design, modern UI projects, and creative development work.
-      </p>
-    </div>
-
+  <div class="text-center p-6">
+    <p class="text-gray-300">© 2026 HomeSmart — All Rights Reserved</p>
   </div>
-
-  <!-- BOTTOM -->
-  <div class="text-center text-gray-400 py-4 border-t border-gray-700 text-sm">
-  © 2026 HomeSmart — All Rights Reserved  
-  Vojsava Gjiriti | Freelance Web Designer  
-
-  <a href="https://vojsavastudio.infinityfreeapp.com/" target="_blank"
-     class="text-yellow-400 hover:underline">
-    vojsavastudio.infinityfreeapp.com
-  </a>
-</div>
 
 </footer>
 
-</body>
-
-  <script>
-   <script>
+<!-- SCRIPT (FIXED) -->
+<script>
   const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("menu"); 
+  const menu = document.getElementById("menu");
 
   if (btn && menu) {
     btn.addEventListener("click", () => {
@@ -172,4 +115,6 @@
     });
   }
 </script>
+
+</body>
 </html>
