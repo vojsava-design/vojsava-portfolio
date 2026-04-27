@@ -9,23 +9,20 @@
 
 <body class="bg-gray-900 text-white">
 
-<!-- HEADER -->
-<header class="bg-gray-800 px-6 py-4">
-  <div class="flex items-center">
+<!-- ================= HEADER ================= -->
+<header class="bg-gray-800 px-6 py-4 sticky top-0 z-50">
 
-    <!-- LOGO -->
-    <a href="index.html" class="flex items-center gap-3">
+  <div class="flex items-center relative">
+
+    <!-- LOGO (LEFT) -->
+    <a href="index.html" class="flex items-center gap-3 z-10">
       <img src="image/logo.webp" class="w-12 h-12 rounded-full" alt="logo">
       <span class="text-yellow-400 font-bold text-xl">HomeSmart</span>
     </a>
 
-    <!-- MOBILE BUTTON -->
-    <button id="menu-btn" class="md:hidden ml-auto text-3xl">☰</button>
-
-    <!-- MENU -->
+    <!-- DESKTOP MENU (CENTER) -->
     <nav id="menu"
-      class="hidden flex-col absolute top-20 left-0 w-full bg-gray-800 p-6 gap-4 z-50
-             md:static md:flex md:flex-row md:flex-1 md:justify-center md:items-center md:gap-10">
+      class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-10 font-semibold">
 
       <a href="index.html" class="hover:text-yellow-300">Home</a>
       <a href="project.html" class="hover:text-yellow-300">Project</a>
@@ -35,15 +32,33 @@
 
     </nav>
 
+    <!-- MOBILE BUTTON (RIGHT) -->
+    <button id="menu-btn" class="md:hidden ml-auto text-3xl">☰</button>
+
   </div>
+
+  <!-- MOBILE MENU -->
+  <nav id="mobile-menu"
+    class="hidden flex-col md:hidden bg-gray-800 p-6 gap-4 mt-4">
+
+    <a href="index.html" class="block py-2">Home</a>
+    <a href="project.html" class="block py-2">Project</a>
+    <a href="about.html" class="block py-2">About</a>
+    <a href="blog.html" class="block py-2">Blog</a>
+    <a href="contact.html" class="block py-2">Contact</a>
+
+  </nav>
+
 </header>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 <section class="relative h-screen flex items-center justify-center text-center">
 
-  <img src="./image/swiss2.jpg" class="absolute w-full h-full object-cover opacity-40">
+  <img src="./image/swiss2.jpg"
+       class="absolute w-full h-full object-cover opacity-40">
 
   <div class="relative z-10 max-w-2xl">
+
     <h2 class="text-4xl md:text-6xl font-bold text-orange-400 mb-6">
       Smart Homes Start Here
     </h2>
@@ -52,14 +67,16 @@
       HomeSmart is the best company for designing modern homes.
     </p>
 
-    <a href="Project.html" class="bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600">
+    <a href="project.html"
+       class="bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600">
       View Projects
     </a>
+
   </div>
 
 </section>
 
-<!-- FOOTER (same for all pages) -->
+<!-- ================= FOOTER ================= -->
 <footer class="bg-gray-800 text-white mt-10">
 
   <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 p-6">
@@ -71,9 +88,9 @@
         <span class="text-yellow-400 font-bold">HomeSmart</span>
       </a>
 
-      <a href="About.html" class="block hover:underline">About</a>
-      <a href="Project.html" class="block hover:underline">Projects</a>
-      <a href="Blog.html" class="block hover:underline">Blog</a>
+      <a href="about.html" class="block hover:underline">About</a>
+      <a href="project.html" class="block hover:underline">Projects</a>
+      <a href="blog.html" class="block hover:underline">Blog</a>
       <a href="privacy.html" class="block hover:underline">Privacy Policy</a>
     </div>
 
@@ -102,27 +119,30 @@
 
   </div>
 
- <div class="text-center text-gray-400 py-4 border-t border-gray-700 text-sm">
-  © 2026 HomeSmart — All Rights Reserved  
-  Vojsava Gjiriti | Freelance Web Designer  
+  <div class="text-center text-gray-400 py-4 border-t border-gray-700 text-sm">
+    © 2026 HomeSmart — All Rights Reserved  
+    Vojsava Gjiriti | Freelance Web Designer  
 
-  <a href="https://vojsavastudio.infinityfreeapp.com/" target="_blank"
-     class="text-yellow-400 hover:underline">
-    vojsavastudio.infinityfreeapp.com
-  </a>
-</div>
+    <a href="https://vojsavastudio.infinityfreeapp.com/"
+       target="_blank"
+       class="text-yellow-400 hover:underline">
+      vojsavastudio.infinityfreeapp.com
+    </a>
+  </div>
 
 </footer>
 
-</body>
- <script>
+<!-- ================= JAVASCRIPT ================= -->
+<script>
   const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("menu");
+  const mobileMenu = document.getElementById("mobile-menu");
 
-  if (btn && menu) {
+  if (btn && mobileMenu) {
     btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("hidden");
     });
   }
 </script>
+
+</body>
 </html>
