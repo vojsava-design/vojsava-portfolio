@@ -1,126 +1,114 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HomeSmart</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
 <body class="bg-gray-900 text-white">
 
-<!-- ================= HEADER ================= -->
- 
+<!-- HEADER -->
 <div id="header"></div>
-<!-- ================= HERO ================= -->
+
+<!-- HERO -->
 <section class="relative h-screen flex items-center justify-center text-center">
 
-  <img src="./image/swiss2.jpg"
-       class="absolute w-full h-full object-cover opacity-40">
+  <img src="image/home6.webp"
+       class="absolute w-full h-full object-cover">
 
-  <div class="relative z-10 max-w-2xl">
+  <div class="absolute w-full h-full bg-black/60"></div>
 
-    <h2 class="text-4xl md:text-6xl font-bold text-orange-400 mb-6">
-      Smart Homes Start Here
-    </h2>
+  <div class="relative z-10 max-w-3xl px-6">
 
-    <p class="text-lg text-gray-200 mb-6">
-      HomeSmart is the best company for designing modern homes.
+    <h1 class="text-5xl md:text-6xl font-bold text-yellow-300 mb-6">
+      Find Your Dream Home
+    </h1>
+
+    <p class="text-gray-200 text-lg mb-8">
+      Modern real estate website with beautiful houses, villas and apartments.
     </p>
 
-    <a href="project.html"
-       class="bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600">
-      View Projects
-    </a>
+    <div class="flex justify-center gap-4">
+      <a href="project.html"
+         class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition">
+        View Properties
+      </a>
+
+      <a href="contact.html"
+         class="border border-yellow-400 px-6 py-3 rounded-lg text-yellow-300 hover:bg-yellow-400 hover:text-black transition">
+        Contact Me
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURES SECTION (THIS WAS MISSING!) -->
+<section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-6 text-center">
+
+  <div class="bg-gray-800 p-6 rounded-xl">
+    <h3 class="text-yellow-300 font-bold text-xl mb-2">Buy Homes</h3>
+    <p class="text-gray-300">Find modern and luxury houses easily.</p>
+  </div>
+
+  <div class="bg-gray-800 p-6 rounded-xl">
+    <h3 class="text-yellow-300 font-bold text-xl mb-2">Rent Homes</h3>
+    <p class="text-gray-300">Flexible rental options for everyone.</p>
+  </div>
+
+  <div class="bg-gray-800 p-6 rounded-xl">
+    <h3 class="text-yellow-300 font-bold text-xl mb-2">Sell Property</h3>
+    <p class="text-gray-300">List your home and get buyers fast.</p>
+  </div>
+
+</section>
+
+<!-- ABOUT PREVIEW -->
+<section class="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-10 items-center">
+
+  <img src="image/home7.webp" class="rounded-xl shadow-lg">
+
+  <div>
+    <h2 class="text-3xl font-bold text-yellow-300 mb-4">
+      About HomeSmart
+    </h2>
+
+    <p class="text-gray-300 leading-7 mb-4">
+      We are a modern real estate platform helping people find their perfect home.
+    </p>
+
+    <p class="text-gray-400">
+      Clean design, fast browsing, and beautiful property listings.
+    </p>
+  </div>
+
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section class="max-w-6xl mx-auto px-6 py-10">
+
+  <h2 class="text-2xl font-bold text-yellow-300 mb-6 text-center">
+    Featured Homes
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <img src="image/hom12.jpeg" class="rounded-xl h-52 w-full object-cover hover:scale-105 transition">
+    <img src="image/hom13.jpeg" class="rounded-xl h-52 w-full object-cover hover:scale-105 transition">
+    <img src="image/hom14.jpeg" class="rounded-xl h-52 w-full object-cover hover:scale-105 transition">
 
   </div>
 
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="bg-gray-800 text-white mt-10">
-
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 p-6">
-
-    <!-- LOGO -->
-    <div>
-      <a href="index.html" class="flex items-center gap-3 mb-4">
-        <img src="image/logo.webp" class="w-10 h-10 rounded-full">
-        <span class="text-yellow-400 font-bold">HomeSmart</span>
-      </a>
-
-      <a href="about.html" class="block hover:underline">About</a>
-      <a href="project.html" class="block hover:underline">Projects</a>
-      <a href="blog.html" class="block hover:underline">Blog</a>
-      <a href="privacy.html" class="block hover:underline">Privacy Policy</a>
-    </div>
-
-    <!-- CONTACT -->
-    <div>
-      <h3 class="text-yellow-300 font-bold mb-3">Contact</h3>
-
-      <a href="mailto:sawa.sawa7920@gmail.com" class="block hover:underline">Email</a>
-
-      <a href="https://www.instagram.com/vojsava_codes" target="_blank" class="block hover:underline">
-        Instagram
-      </a>
-
-      <a href="https://linkedin.com/in/vojsava-gjiriti-8a9284290" target="_blank" class="block hover:underline">
-        LinkedIn
-      </a>
-    </div>
-
-    <!-- INFO -->
-    <div>
-      <h3 class="text-yellow-300 font-bold mb-3">About</h3>
-      <p class="text-gray-300 text-sm">
-        Portfolio website for modern web design and development.
-      </p>
-    </div>
-
-  </div>
-
-  <div class="text-center text-gray-400 py-4 border-t border-gray-700 text-sm">
-    © 2026 HomeSmart — All Rights Reserved  
-    Vojsava Gjiriti | Freelance Web Designer  
-
-    <a href="https://vojsavastudio.infinityfreeapp.com/"
-       target="_blank"
-       class="text-yellow-400 hover:underline">
-      vojsavastudio.infinityfreeapp.com
-    </a>
-  </div>
-
-</footer>
-
-<!-- ================= JAVASCRIPT ================= -->
-<!-- PAGE CONTENT ABOVE -->
-
-<div id="header"></div>
-
-<!-- YOUR PAGE CONTENT -->
-<section>...</section>
-
 <!-- FOOTER -->
-<footer>...</footer>
+<div id="footer"></div>
 
-<!-- ✅ SCRIPT GOES HERE (BOTTOM OF PAGE) -->
 <script>
 fetch("header.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
+  });
 
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
-
-    if (btn && menu) {
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    }
+fetch("footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
   });
 </script>
 
 </body>
-</html>
