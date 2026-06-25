@@ -10,26 +10,26 @@
 <body class="bg-gray-900 text-white">
 
 <!-- ================= HEADER ================= -->
- 
 <div id="header"></div>
-<!-- ================= HERO ================= -->
+
+<!-- ================= HERO SECTION ================= -->
 <section class="relative h-screen flex items-center justify-center text-center">
 
   <img src="./image/swiss2.jpg"
        class="absolute w-full h-full object-cover opacity-40">
 
-  <div class="relative z-10 max-w-2xl">
+  <div class="relative z-10 max-w-2xl px-4">
 
-    <h2 class="text-4xl md:text-6xl font-bold text-orange-400 mb-6">
+    <h1 class="text-4xl md:text-6xl font-bold text-orange-400 mb-6">
       Smart Homes Start Here
-    </h2>
+    </h1>
 
     <p class="text-lg text-gray-200 mb-6">
-      HomeSmart is the best company for designing modern homes.
+      HomeSmart is a modern real estate website built with clean design and simple UI.
     </p>
 
     <a href="project.html"
-       class="bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600">
+       class="bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600 transition">
       View Projects
     </a>
 
@@ -37,88 +37,57 @@
 
 </section>
 
+<!-- ================= ABOUT SECTION ================= -->
+<section class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 py-16 items-center">
+
+  <img src="./image/home7.webp" class="rounded-xl shadow-lg">
+
+  <div>
+    <h2 class="text-3xl font-bold text-yellow-300 mb-4">About Us</h2>
+
+    <p class="text-gray-300 leading-relaxed mb-4">
+      We design and develop modern real estate websites for showcasing properties in a clean and professional way.
+    </p>
+
+    <p class="text-gray-400">
+      Our goal is to make property browsing simple, fast, and beautiful.
+    </p>
+  </div>
+
+</section>
+
+<!-- ================= FEATURED PROJECTS ================= -->
+<section class="px-6 py-10 max-w-6xl mx-auto">
+
+  <h2 class="text-2xl font-bold text-yellow-300 mb-6 text-center">
+    Featured Projects
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <img src="./image/home6.webp" class="rounded-xl h-48 w-full object-cover hover:scale-105 transition">
+    <img src="./image/home7.webp" class="rounded-xl h-48 w-full object-cover hover:scale-105 transition">
+    <img src="./image/swiss5.jpg" class="rounded-xl h-48 w-full object-cover hover:scale-105 transition">
+
+  </div>
+
+</section>
+
 <!-- ================= FOOTER ================= -->
-<footer class="bg-gray-800 text-white mt-10">
+<div id="footer"></div>
 
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 p-6">
-
-    <!-- LOGO -->
-    <div>
-      <a href="index.html" class="flex items-center gap-3 mb-4">
-        <img src="image/logo.webp" class="w-10 h-10 rounded-full">
-        <span class="text-yellow-400 font-bold">HomeSmart</span>
-      </a>
-
-      <a href="about.html" class="block hover:underline">About</a>
-      <a href="project.html" class="block hover:underline">Projects</a>
-      <a href="blog.html" class="block hover:underline">Blog</a>
-      <a href="privacy.html" class="block hover:underline">Privacy Policy</a>
-    </div>
-
-    <!-- CONTACT -->
-    <div>
-      <h3 class="text-yellow-300 font-bold mb-3">Contact</h3>
-
-      <a href="mailto:sawa.sawa7920@gmail.com" class="block hover:underline">Email</a>
-
-      <a href="https://www.instagram.com/vojsava_codes" target="_blank" class="block hover:underline">
-        Instagram
-      </a>
-
-      <a href="https://linkedin.com/in/vojsava-gjiriti-8a9284290" target="_blank" class="block hover:underline">
-        LinkedIn
-      </a>
-    </div>
-
-    <!-- INFO -->
-    <div>
-      <h3 class="text-yellow-300 font-bold mb-3">About</h3>
-      <p class="text-gray-300 text-sm">
-        Portfolio website for modern web design and development.
-      </p>
-    </div>
-
-  </div>
-
-  <div class="text-center text-gray-400 py-4 border-t border-gray-700 text-sm">
-    © 2026 HomeSmart — All Rights Reserved  
-    Vojsava Gjiriti | Freelance Web Designer  
-
-    <a href="https://vojsavastudio.infinityfreeapp.com/"
-       target="_blank"
-       class="text-yellow-400 hover:underline">
-      vojsavastudio.infinityfreeapp.com
-    </a>
-  </div>
-
-</footer>
-
-<!-- ================= JAVASCRIPT ================= -->
-<!-- PAGE CONTENT ABOVE -->
-
-<div id="header"></div>
-
-<!-- YOUR PAGE CONTENT -->
-<section>...</section>
-
-<!-- FOOTER -->
-<footer>...</footer>
-
-<!-- ✅ SCRIPT GOES HERE (BOTTOM OF PAGE) -->
+<!-- ================= SCRIPTS (IMPORTANT) ================= -->
 <script>
 fetch("header.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
+  });
 
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
-
-    if (btn && menu) {
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    }
+fetch("footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
   });
 </script>
 
