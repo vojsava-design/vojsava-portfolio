@@ -89,15 +89,15 @@
           class="rounded-xl h-56 w-full object-cover cursor-pointer hover:scale-105 transition"
           onclick="openLightbox(0)">
 
-        <img src="./image/hom13.jpeg"
+        <img src="./image/swiss5.jpg"
           class="rounded-xl h-56 w-full object-cover cursor-pointer hover:scale-105 transition"
           onclick="openLightbox(1)">
 
-        <img src="./image/hom14.jpeg"
+        <img src="./image/siwss4.webp"
           class="rounded-xl h-56 w-full object-cover cursor-pointer hover:scale-105 transition"
           onclick="openLightbox(2)">
 
-        <img src="./image/hom12.jpeg"
+        <img src="./image/home6.webp"
           class="rounded-xl h-56 w-full object-cover cursor-pointer hover:scale-105 transition"
           onclick="openLightbox(3)">
 
@@ -150,9 +150,9 @@
 <script>
 const images = [
   "./image/hom12.jpeg",
-  "./image/hom13.jpeg",
-  "./image/hom14.jpeg",
-  "./image/hom12.jpeg"
+  "./image/swiss5.jpg",
+  "./image/siwss4.webp",
+  "./image/home6.webp"
 ];
 
 let currentIndex = 0;
@@ -176,14 +176,20 @@ function nextImage() {
 
 function prevImage() {
   currentIndex = (currentIndex - 1 + images.length) % images.length;
-  document.getElementById("lightbox").src = images[currentIndex];
+  document.getElementById("lightbox-img").src = images[currentIndex];
 }
 
-// click outside to close
-document.getElementById("lightbox").addEventListener("click", function(e) {
-  if (e.target === this) closeLightbox();
-});
-</script>
+window.onload = function () {
+  const lightbox = document.getElementById("lightbox");
 
+  if (lightbox) {
+    lightbox.addEventListener("click", function(e) {
+      if (e.target === this) {
+        closeLightbox();
+      }
+    });
+  }
+};
+</script>
 </body>
 </html>
