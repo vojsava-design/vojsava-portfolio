@@ -38,9 +38,9 @@
         <p class="text-gray-400 mb-5">💰 Price: $450,000</p>
 
         <a href="modern-house.html"
-   class="inline-block bg-yellow-400 text-black font-bold px-5 py-3 rounded-xl hover:bg-yellow-300 transition">
-  View Details
-</a>
+           class="inline-block bg-yellow-400 text-black font-bold px-5 py-3 rounded-xl hover:bg-yellow-300 transition">
+          View Details
+        </a>
       </div>
     </article>
 
@@ -61,9 +61,9 @@
         <p class="text-gray-400 mb-5">💰 Price: $780,000</p>
 
         <a href="modern-house.html"
-   class="inline-block bg-yellow-400 text-black font-bold px-5 py-3 rounded-xl hover:bg-yellow-300 transition">
-  View Details
-</a>
+           class="inline-block bg-yellow-400 text-black font-bold px-5 py-3 rounded-xl hover:bg-yellow-300 transition">
+          View Details
+        </a>
       </div>
     </article>
 
@@ -83,46 +83,45 @@
         <p class="text-gray-400 mb-1">📍 Location: Germany</p>
         <p class="text-gray-400 mb-5">💰 Price: $320,000</p>
 
-     <a href="modern-house.html"
-   class="inline-block bg-yellow-400 text-black font-bold px-5 py-3 rounded-xl hover:bg-yellow-300 transition">
-  View Details
-</a>
+        <a href="modern-house.html"
+           class="inline-block bg-yellow-400 text-black font-bold px-5 py-3 rounded-xl hover:bg-yellow-300 transition">
+          View Details
+        </a>
       </div>
     </article>
 
   </main>
 
   <!-- FOOTER -->
-  
   <div id="footer"></div>
 
-  <!-- HEADER SCRIPT -->
- <script>
-/* HEADER LOAD */
-fetch("header.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("header").innerHTML = data;
+  <!-- SCRIPT -->
+  <script>
+    /* HEADER LOAD */
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
 
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
 
-    if (btn && menu) {
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    }
-  })
-  .catch(error => console.error("Header failed to load:", error));
+        if (btn && menu) {
+          btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+          });
+        }
+      })
+      .catch(error => console.error("Header failed to load:", error));
 
-/* FOOTER LOAD */
-fetch("footer.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("footer").innerHTML = data;
-  })
-  .catch(error => console.error("Footer failed to load:", error));
-</script>
+    /* FOOTER LOAD */
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      })
+      .catch(error => console.error("Footer failed to load:", error));
+  </script>
 
 </body>
 </html>
