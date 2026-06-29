@@ -69,23 +69,13 @@
 
 
 <!-- SCRIPT (FIXED) -->
-/* HEADER LOAD */
+<script>
 fetch("header.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
-
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
-
-    if (btn && menu) {
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    }
   });
 
-/* FOOTER LOAD */
 fetch("footer.html")
   .then(res => res.text())
   .then(data => {
