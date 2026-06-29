@@ -11,6 +11,7 @@
 
 <!-- ================= HEADER ================= -->
 <div id="header"></div>
+
 <!-- ================= HERO ================= -->
 <section class="text-center py-10">
   <h1 class="text-4xl font-bold text-yellow-300">Our Blog</h1>
@@ -57,25 +58,10 @@
 </section>
 
 <!-- ================= FOOTER ================= -->
-
 <div id="footer"></div>
 
-
-<!-- ================= JAVASCRIPT ================= -->
-<!-- PAGE CONTENT ABOVE -->
-
-<div id="header"></div>
-
-<!-- YOUR PAGE CONTENT -->
-<section>...</section>
-
-<!-- FOOTER -->
-  
-
-
-<!-- ✅ SCRIPT GOES HERE (BOTTOM OF PAGE) -->
+<!-- ================= SCRIPT ================= -->
 <script>
-/* HEADER LOAD */
 fetch("header.html")
   .then(res => res.text())
   .then(data => {
@@ -91,7 +77,6 @@ fetch("header.html")
     }
   });
 
-/* FOOTER LOAD */
 fetch("footer.html")
   .then(res => res.text())
   .then(data => {
@@ -101,3 +86,4 @@ fetch("footer.html")
 
 </body>
 </html>
+
